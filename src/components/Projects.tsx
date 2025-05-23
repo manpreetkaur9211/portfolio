@@ -9,8 +9,8 @@ interface Project {
   description: string;
   image: string;
   technologies: readonly string[];
-  liveUrl: string;
-  codeUrl: string;
+  liveUrl?: string;
+  codeUrl?: string;
 }
 
 const ProjectCard = ({ project }: { project: Project }) => {
@@ -67,22 +67,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             </span>
           ))}
         </div>
-        <div className="flex space-x-4">
-          <a 
-            href={project.liveUrl}
-            className="flex items-center text-portfolio-accent hover:text-portfolio-light-blue transition-colors"
-          >
-            <ExternalLink size={18} className="mr-1" />
-            <span>Live Demo</span>
-          </a>
-          <a 
-            href={project.codeUrl}
-            className="flex items-center text-portfolio-accent hover:text-portfolio-light-blue transition-colors"
-          >
-            <Code size={18} className="mr-1" />
-            <span>View Code</span>
-          </a>
-        </div>
+      
       </div>
     </div>
   );

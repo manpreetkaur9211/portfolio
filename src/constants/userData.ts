@@ -85,10 +85,19 @@ export const USER_DATA = {
       id: 5,
       title: "Reliance JIO",
       description: "A collaboration system for telecommunication network setup. Worked as a front-end developer with Angular and Bootstrap.",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3",
+      image: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Reliance_Jio_Logo.svg",
       technologies: ["Angular", "Bootstrap"],
-      liveUrl: "#",
-      codeUrl: "#"
+      // liveUrl: "#",
+      // codeUrl: "#"
+    },
+    {
+      id: 6,
+      title: "Chalo",
+      description: "A multi-platform transportation management system that includes a tracking system, fleet management, and a booking system. Worked as a front-end developer with Angular and Bootstrap.",
+      image: "https://chalo.com/assets/images/mock.png",
+      technologies: ["Angular", "Bootstrap", "React", "Material UI"],
+      liveUrl: "https://chalo.com/",
+      // codeUrl: "#"
     }
   ],
   selfLearning: {
