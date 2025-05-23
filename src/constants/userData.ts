@@ -75,9 +75,9 @@ export const USER_DATA = {
     {
       id: 4,
       title: "iBASEt",
-      description: "A manufacturing process management webapp using React, Jema, and react-ind for efficient tracking and management.",
+      description: "A manufacturing process management webapp using React, lerna, and react-ind for efficient tracking and management.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3",
-      technologies: ["React", "Jema", "React-ind"],
+      technologies: ["React", "React-lerna", "React-ind"],
       liveUrl: "#",
       codeUrl: "#"
     },
