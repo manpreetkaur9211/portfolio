@@ -2,7 +2,7 @@ export const USER_DATA = {
   personal: {
     name: "Manpreet Kaur",
     role: "Full Stack Developer",
-    introduction: "A passionate Full Stack Developer with 9 years of experience in creating efficient, scalable, and user-friendly applications.",
+    introduction: "A passionate Full Stack Developer with 9 years of experience, now embracing AI-assisted development to build efficient, scalable applications faster than ever.",
     image: {
       url: "manpreet.jpg",
       alt: "Manpreet Kaur"
@@ -12,7 +12,8 @@ export const USER_DATA = {
     paragraphs: [
       "Hello! I'm Manpreet, a Senior Front-End Engineer/Full-Stack Developer with 9 years of experience specializing in front-end development using React and Angular, and back-end development with Node.js.",
       "I have proven ability to design, develop, and deliver high-quality web applications with strong expertise in UI/UX principles, Agile methodologies, and AWS for scalable solutions. Throughout my career, I've worked on various complex projects across different industries.",
-      "I'm passionate about creating efficient, high-performance applications and enjoy mentoring junior developers. I believe in implementing best practices for coding, testing, and documentation to ensure code quality and maintainability."
+      "I'm passionate about creating efficient, high-performance applications and enjoy mentoring junior developers. I believe in implementing best practices for coding, testing, and documentation to ensure code quality and maintainability.",
+      "Recently, I've been embracing AI-assisted development — using tools like Claude Code for prompt-driven workflows, AI pair programming, and rapid prototyping. This has significantly accelerated how I design and ship full-stack features."
     ]
   },
   experience: [
@@ -130,6 +131,15 @@ export const USER_DATA = {
         description: "Deep dive into React performance optimization, custom hooks, and advanced state management.",
         certificateUrl: "#",
         skills: ["React", "Performance", "State Management"]
+      },
+      {
+        id: 4,
+        title: "AI-Assisted Development",
+        platform: "Self-Directed (Claude Code / Anthropic)",
+        date: "2025",
+        description: "Adopted AI pair programming with Claude Code — prompt-driven development, iterative vibe coding, and AI-accelerated full-stack workflows.",
+        certificateUrl: "#",
+        skills: ["Claude Code", "Prompt Engineering", "AI Pair Programming", "Vibe Coding"]
       }
     ]
   },
@@ -181,6 +191,21 @@ export const USER_DATA = {
           "Financial goal setting",
           "Interactive charts"
         ]
+      },
+      {
+        id: 4,
+        title: "Portfolio Hub",
+        description: "Personal portfolio built end-to-end with AI-assisted development using Claude Code — vibe coding, prompt-driven UI, and a modern React + TypeScript stack.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3",
+        technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Claude Code"],
+        liveUrl: "#",
+        codeUrl: "https://github.com/manpreetkaur9211",
+        features: [
+          "AI-assisted development with Claude Code",
+          "Responsive design with Tailwind CSS",
+          "Scroll-triggered animations",
+          "EmailJS contact form"
+        ]
       }
     ]
   },
@@ -203,7 +228,9 @@ export const USER_DATA = {
       { name: "UI/UX Design", percentage: 85, color: "bg-purple-500" },
       { name: "AWS", percentage: 85, color: "bg-purple-600" },
       { name: "Agile/SDLC", percentage: 90, color: "bg-purple-700" },
-      { name: "Testing Frameworks", percentage: 85, color: "bg-purple-800" }
+      { name: "Testing Frameworks", percentage: 85, color: "bg-purple-800" },
+      { name: "AI-Assisted Development", percentage: 80, color: "bg-orange-500" },
+      { name: "Prompt Engineering", percentage: 75, color: "bg-orange-600" }
     ]
   },
   contact: {
