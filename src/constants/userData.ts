@@ -51,7 +51,7 @@ export const USER_DATA = {
       description: "An E-Audit system for the automobile industry. Worked as a full-stack developer utilizing React.js, Node.js, MongoDB, Twilio, and AWS.",
       image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3",
       technologies: ["React", "Node.js", "MongoDB", "AWS", "Twilio"],
-      liveUrl: "#",
+      liveUrl: "https://www.daffodilsw.com/case-study/developing-compliance-management-software-solution/",
       codeUrl: "#"
     },
     {

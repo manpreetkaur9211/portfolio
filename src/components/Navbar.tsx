@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { USER_DATA } from "@/constants/userData";
 
 const navLinks = [
   { title: "About", href: "#about" },
@@ -60,8 +61,10 @@ const Navbar = () => {
                 {link.title}
               </a>
             ))}
-            <Button className="bg-portfolio-accent hover:bg-portfolio-light-blue">
-              Resume
+            <Button asChild className="bg-portfolio-accent hover:bg-portfolio-light-blue">
+              <a href={USER_DATA.contact.resumePath} download={USER_DATA.contact.resumeFileName}>
+                Resume
+              </a>
             </Button>
           </nav>
 
@@ -89,8 +92,10 @@ const Navbar = () => {
                   {link.title}
                 </a>
               ))}
-              <Button className="bg-portfolio-accent hover:bg-portfolio-light-blue w-full">
-                Resume
+              <Button asChild className="bg-portfolio-accent hover:bg-portfolio-light-blue w-full">
+                <a href={USER_DATA.contact.resumePath} download={USER_DATA.contact.resumeFileName}>
+                  Resume
+                </a>
               </Button>
             </div>
           </div>
