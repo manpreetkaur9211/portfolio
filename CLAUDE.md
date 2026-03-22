@@ -6,11 +6,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 # Development
-bun run dev        # Start dev server (Vite)
-bun run build      # Production build
-bun run build:dev  # Dev mode build
-bun run lint       # ESLint
-bun run preview    # Preview production build
+npm run dev        # Start dev server (Vite)
+npm run build      # Production build
+npm run build:dev  # Dev mode build
+npm run lint       # ESLint
+npm run preview    # Preview production build
 ```
 
 ## Architecture

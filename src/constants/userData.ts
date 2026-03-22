@@ -20,7 +20,7 @@ export const USER_DATA = {
     {
       id: 1,
       title: "Full-Stack Developer (React, Node)",
-      company: "Yepro Pty Ltd",
+      company: "Yeyro Pty Ltd",
       date: "Jul 2024 - Present",
       location: "Melbourne",
       description: [
