@@ -27,3 +27,10 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+
+# Job scraper secrets — never commit these
+scripts/job-scraper/config.json
+scripts/job-scraper/gcp-service-account.json
+
+# LinkedIn posts — drafts only, not for public repo
+public/linkedin-posts/

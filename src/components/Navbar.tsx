@@ -6,10 +6,10 @@ import { USER_DATA } from "@/constants/userData";
 const navLinks = [
   { title: "About", href: "#about" },
   { title: "Skills", href: "#skills" },
+  { title: "AI & Learning", href: "#self-learning" },
+  { title: "Personal Projects", href: "#self-projects" },
   { title: "Experience", href: "#experience" },
   { title: "Projects", href: "#projects" },
-  { title: "Learning", href: "#self-learning" },
-  { title: "Personal Projects", href: "#self-projects" },
   { title: "Contact", href: "#contact" }
 ];
 

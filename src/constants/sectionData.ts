@@ -16,13 +16,13 @@ export const SECTION_DATA = {
     filters: ["all", "React", "Angular", "Node.js", "MongoDB", "AWS"]
   },
   selfLearning: {
-    title: "Self Learning Journey",
-    subtitle: "Continuous learning is a key part of my professional growth. Here are some of the courses and certifications I've completed.",
+    title: "AI & Technical Growth",
+    subtitle: "Staying ahead means investing in what's next. Here are the courses and self-directed programs I've completed — including AI-assisted development workflows that are now part of how I build.",
     filters: ["all", "Frontend", "Backend", "Cloud", "DevOps", "AI/ML"]
   },
   selfProjects: {
-    title: "Personal Projects",
-    subtitle: "These are projects I've built to explore new technologies and solve interesting problems.",
+    title: "AI-Powered Projects",
+    subtitle: "Projects I've built independently — applying AI-assisted workflows, modern full-stack patterns, and new tools to real problems.",
     filters: ["all", "Web Apps", "AI/ML", "Tools", "Games"]
   },
   skills: {

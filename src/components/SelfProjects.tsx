@@ -139,24 +139,28 @@ const SelfProjects = () => {
                 )}
 
                 <div className="flex gap-4">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-portfolio-accent hover:text-portfolio-blue transition-colors"
-                  >
-                    <ExternalLink className="mr-2" size={16} />
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.codeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-portfolio-accent hover:text-portfolio-blue transition-colors"
-                  >
-                    <Code className="mr-2" size={16} />
-                    View Code
-                  </a>
+                  {project.liveUrl && project.liveUrl !== '#' && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-portfolio-accent hover:text-portfolio-blue transition-colors"
+                    >
+                      <ExternalLink className="mr-2" size={16} />
+                      Live Demo
+                    </a>
+                  )}
+                  {project.codeUrl && project.codeUrl !== '#' && (
+                    <a
+                      href={project.codeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-portfolio-accent hover:text-portfolio-blue transition-colors"
+                    >
+                      <Code className="mr-2" size={16} />
+                      View Code
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

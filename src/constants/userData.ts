@@ -1,8 +1,8 @@
 export const USER_DATA = {
   personal: {
     name: "Manpreet Kaur",
-    role: "Full Stack Developer",
-    introduction: "A passionate Full Stack Developer with 9 years of experience, now embracing AI-assisted development to build efficient, scalable applications faster than ever.",
+    role: "Senior Full Stack Developer",
+    introduction: "Senior Full Stack Developer with 9 years across React, Angular, TypeScript, and Node.js. I build production-grade applications and integrate AI-assisted workflows — using Claude Code for prompt-driven development, rapid prototyping, and shipping faster without compromising quality.",
     image: {
       url: "manpreet.jpg",
       alt: "Manpreet Kaur"
@@ -10,10 +10,9 @@ export const USER_DATA = {
   },
   about: {
     paragraphs: [
-      "Hello! I'm Manpreet, a Senior Front-End Engineer/Full-Stack Developer with 9 years of experience specializing in front-end development using React and Angular, and back-end development with Node.js.",
-      "I have proven ability to design, develop, and deliver high-quality web applications with strong expertise in UI/UX principles, Agile methodologies, and AWS for scalable solutions. Throughout my career, I've worked on various complex projects across different industries.",
-      "I'm passionate about creating efficient, high-performance applications and enjoy mentoring junior developers. I believe in implementing best practices for coding, testing, and documentation to ensure code quality and maintainability.",
-      "Recently, I've been embracing AI-assisted development — using tools like Claude Code for prompt-driven workflows, AI pair programming, and rapid prototyping. This has significantly accelerated how I design and ship full-stack features."
+      "Hello! I'm Manpreet, a Senior Full Stack Developer with 9 years of experience specializing in front-end development using React and Angular, and back-end development with Node.js.",
+      "I integrate AI-assisted development into my daily workflows — using Claude Code for prompt-driven development, AI pair programming, and rapid prototyping. This has significantly accelerated how I design and ship full-stack features without compromising quality.",
+      "I've delivered high-quality web applications across healthcare, telecom, automotive, and enterprise industries, with strong expertise in UI/UX, AWS-scalable architectures, and Agile delivery. I also mentor junior developers and champion code quality through systematic review and documentation practices."
     ]
   },
   experience: [
@@ -116,15 +115,6 @@ export const USER_DATA = {
       },
       {
         id: 2,
-        title: "AWS Solutions Architect",
-        platform: "AWS",
-        date: "2023",
-        description: "Comprehensive training in AWS services, architecture design, and cloud best practices.",
-        certificateUrl: "#",
-        skills: ["AWS", "Cloud Architecture", "DevOps"]
-      },
-      {
-        id: 3,
         title: "Advanced React Patterns",
         platform: "Frontend Masters",
         date: "2023",
@@ -133,7 +123,7 @@ export const USER_DATA = {
         skills: ["React", "Performance", "State Management"]
       },
       {
-        id: 4,
+        id: 3,
         title: "AI-Assisted Development",
         platform: "Self-Directed (Claude Code / Anthropic)",
         date: "2025",

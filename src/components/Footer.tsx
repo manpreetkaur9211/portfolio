@@ -38,9 +38,6 @@ const Footer = () => {
           <p>&copy; {currentYear} {USER_DATA.personal.name}. All rights reserved.</p>
           
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="text-blue-300 hover:text-white transition-colors">{SECTION_DATA.footer.links.terms}</a>
-            <a href="#" className="text-blue-300 hover:text-white transition-colors">{SECTION_DATA.footer.links.privacy}</a>
-            <a href="#" className="text-blue-300 hover:text-white transition-colors">{SECTION_DATA.footer.links.cookies}</a>
           </div>
         </div>
       </div>

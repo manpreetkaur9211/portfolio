@@ -84,15 +84,17 @@ const SelfLearning = () => {
                     </span>
                   ))}
                 </div>
-                <a
-                  href={course.certificateUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-portfolio-accent hover:text-portfolio-blue transition-colors"
-                >
-                  View Certificate
-                  <ExternalLink className="ml-2" size={16} />
-                </a>
+                {course.certificateUrl && course.certificateUrl !== '#' && (
+                  <a
+                    href={course.certificateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-portfolio-accent hover:text-portfolio-blue transition-colors"
+                  >
+                    View Certificate
+                    <ExternalLink className="ml-2" size={16} />
+                  </a>
+                )}
               </div>
             </div>
           ))}
