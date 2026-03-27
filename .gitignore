@@ -32,5 +32,18 @@ dist-ssr
 scripts/job-scraper/config.json
 scripts/job-scraper/gcp-service-account.json
 
+# Next.js build output
+.next/
+
+# Claude Code local settings and skill cache
+.claude/settings.local.json
+.claude/skills/
+
+# Resume binary
+public/resume.docx
+
+# Scripts — local tooling, not part of the app
+scripts/
+
 # LinkedIn posts — drafts only, not for public repo
 public/linkedin-posts/
