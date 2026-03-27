@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useRef, useState } from "react";
 import { USER_DATA } from "@/constants/userData";
 import { SECTION_DATA } from "@/constants/sectionData";

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { USER_DATA } from "@/constants/userData";
@@ -44,10 +45,13 @@ const Hero = () => {
           </div>
           <div className="flex-shrink-0">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-portfolio-accent shadow-xl">
-              <img
-                src={USER_DATA.personal.image.url}
+              <Image
+                src={`/${USER_DATA.personal.image.url}`}
                 alt={USER_DATA.personal.image.alt}
+                width={256}
+                height={256}
                 className="w-full h-full object-cover"
+                priority
               />
             </div>
           </div>

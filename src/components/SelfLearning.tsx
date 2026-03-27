@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useRef } from "react";
 import { Award, ExternalLink } from "lucide-react";
 import { USER_DATA } from "@/constants/userData";

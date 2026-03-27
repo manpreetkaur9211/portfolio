@@ -1,3 +1,5 @@
+'use client'
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { ExternalLink, Code, ChevronDown } from "lucide-react";
 import { USER_DATA } from "@/constants/userData";
@@ -88,10 +90,11 @@ const SelfProjects = () => {
               className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               <div className="relative aspect-video">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">

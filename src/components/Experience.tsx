@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useRef } from "react";
 import { Briefcase, Calendar } from "lucide-react";
 import { USER_DATA } from "@/constants/userData";

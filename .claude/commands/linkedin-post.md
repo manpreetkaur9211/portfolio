@@ -25,7 +25,7 @@ Write a LinkedIn post that:
 2. **Shares one specific, concrete learning** — something Manpreet actually experienced building with Claude Code. Make it specific enough that readers think "I didn't know that."
 3. **Shows the before/after or the problem/solution** — what changed when using an agentic approach vs traditional?
 4. **Is practical** — readers should be able to apply or try something from this post
-5. **Ends with a CTA or question** — invite discussion, ask what others are doing, or point to something actionable
+5. **Ends with a connection CTA + question** — always close with two things: (1) a direct invitation for the reader to connect with Manpreet on LinkedIn, and (2) a genuine question asking what *they* are doing in the same space. The question must be specific enough to prompt a real answer, not a generic "what do you think?"
 6. **Formatting**: short paragraphs (2-3 lines max), use line breaks generously for LinkedIn readability. 1-3 relevant hashtags at the end only. No emoji overload — max 2-3 if they add value.
 7. **Length**: 150–250 words. Punchy, not padded.
 

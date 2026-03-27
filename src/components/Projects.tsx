@@ -1,3 +1,5 @@
+'use client'
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { ExternalLink, Code } from "lucide-react";
 import { USER_DATA } from "@/constants/userData";
@@ -43,11 +45,12 @@ const ProjectCard = ({ project }: { project: Project }) => {
       ref={cardRef} 
       className="animate-on-scroll bg-white rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2"
     >
-      <div className="aspect-video overflow-hidden">
-        <img 
-          src={project.image} 
-          alt={project.title} 
-          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+      <div className="relative aspect-video overflow-hidden">
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-300 hover:scale-105"
         />
       </div>
       <div className="p-6">
