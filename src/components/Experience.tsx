@@ -1,6 +1,6 @@
 'use client'
-import { useEffect, useRef } from "react";
 import { Briefcase, Calendar } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { USER_DATA } from "@/constants/userData";
 import { SECTION_DATA } from "@/constants/sectionData";
 
@@ -14,32 +14,10 @@ interface ExperienceItem {
 }
 
 const ExperienceCard = ({ item }: { item: ExperienceItem }) => {
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
-
-    return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
-      }
-    };
-  }, []);
+  const cardRef = useIntersectionObserver<HTMLDivElement>()
 
   return (
-    <div 
+    <div
       ref={cardRef} 
       className="animate-on-scroll bg-white p-6 rounded-xl shadow-md border-l-4 border-portfolio-accent mb-8"
     >

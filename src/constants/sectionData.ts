@@ -69,6 +69,10 @@ export const SECTION_DATA = {
       followMe: "Follow Me"
     }
   },
+  blog: {
+    title: "Blog",
+    subtitle: "Thoughts on agentic engineering, AI tools, and modern development."
+  },
   footer: {
     links: {
       terms: "Terms",

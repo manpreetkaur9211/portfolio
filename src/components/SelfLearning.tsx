@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef } from "react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { Award, ExternalLink } from "lucide-react";
 import { USER_DATA } from "@/constants/userData";
 import { SECTION_DATA } from "@/constants/sectionData";
@@ -15,30 +15,10 @@ interface Course {
 }
 
 const SelfLearning = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-in");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
+  const sectionRef = useIntersectionObserver<HTMLElement>({
+    addVisibleClass: false,
+    onIntersect: (entry) => entry.target.classList.add("animate-fade-in"),
+  })
 
   return (
     <section id="self-learning" ref={sectionRef} className="bg-gray-50 animate-on-scroll">

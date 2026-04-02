@@ -1,5 +1,6 @@
 'use client'
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { USER_DATA } from "@/constants/userData";
 import { SECTION_DATA } from "@/constants/sectionData";
 
@@ -11,29 +12,10 @@ interface Skill {
 
 const SkillBar = ({ skill }: { skill: Skill }) => {
   const [width, setWidth] = useState(0);
-  const skillRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            setWidth(skill.percentage);
-          }, 300);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (skillRef.current) {
-      observer.observe(skillRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [skill.percentage]);
+  const skillRef = useIntersectionObserver<HTMLDivElement>({
+    addVisibleClass: false,
+    onIntersect: () => setTimeout(() => setWidth(skill.percentage), 300),
+  })
 
   return (
     <div ref={skillRef} className="mb-6">

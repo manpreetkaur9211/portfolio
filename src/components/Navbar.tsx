@@ -1,11 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { USER_DATA } from "@/constants/userData";
 
-const navLinks = [
+const sectionLinks = [
   { title: "About", href: "#about" },
   { title: "Skills", href: "#skills" },
   { title: "AI & Learning", href: "#self-learning" },
@@ -18,51 +20,60 @@ const navLinks = [
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  // On non-home pages, section links go back to home first
+  const sectionHref = (hash: string) => isHome ? hash : `/${hash}`;
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
       }`}
     >
       <div className="container max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center">
-          <a href="#top" className="font-heading text-2xl font-bold text-portfolio-blue">
+          <Link href="/" className="font-heading text-2xl font-bold text-portfolio-blue">
             Portfolio
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
+            {sectionLinks.map((link) => (
               <a
                 key={link.title}
-                href={link.href}
+                href={sectionHref(link.href)}
                 className="font-medium text-gray-600 hover:text-portfolio-accent transition-colors"
               >
                 {link.title}
               </a>
             ))}
+
+            {/* Blog — separate route, not a hash anchor */}
+            <Link
+              href="/blog"
+              className={`font-medium transition-colors ${
+                pathname.startsWith('/blog')
+                  ? 'text-portfolio-accent'
+                  : 'text-gray-600 hover:text-portfolio-accent'
+              }`}
+            >
+              Blog
+            </Link>
+
             <Button asChild className="bg-portfolio-accent hover:bg-portfolio-light-blue">
               <a href={USER_DATA.contact.resumePath} download={USER_DATA.contact.resumeFileName}>
                 Resume
@@ -71,7 +82,7 @@ const Navbar = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden p-2 focus:outline-none"
             onClick={toggleMenu}
             aria-label="Toggle menu"
@@ -84,16 +95,29 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 animate-fade-in">
             <div className="flex flex-col space-y-4 px-4">
-              {navLinks.map((link) => (
+              {sectionLinks.map((link) => (
                 <a
                   key={link.title}
-                  href={link.href}
+                  href={sectionHref(link.href)}
                   className="font-medium text-gray-600 hover:text-portfolio-accent transition-colors py-2"
                   onClick={closeMenu}
                 >
                   {link.title}
                 </a>
               ))}
+
+              <Link
+                href="/blog"
+                className={`font-medium transition-colors py-2 ${
+                  pathname.startsWith('/blog')
+                    ? 'text-portfolio-accent'
+                    : 'text-gray-600 hover:text-portfolio-accent'
+                }`}
+                onClick={closeMenu}
+              >
+                Blog
+              </Link>
+
               <Button asChild className="bg-portfolio-accent hover:bg-portfolio-light-blue w-full">
                 <a href={USER_DATA.contact.resumePath} download={USER_DATA.contact.resumeFileName}>
                   Resume

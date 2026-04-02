@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { ExternalLink, Code, ChevronDown } from "lucide-react";
 import { USER_DATA } from "@/constants/userData";
 import { SECTION_DATA } from "@/constants/sectionData";
@@ -17,32 +18,12 @@ interface SelfProject {
 }
 
 const SelfProjects = () => {
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useIntersectionObserver<HTMLElement>({
+    addVisibleClass: false,
+    onIntersect: (entry) => entry.target.classList.add("animate-fade-in"),
+  })
   const [activeFilter, setActiveFilter] = useState("all");
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-in");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
 
   const filteredProjects = USER_DATA.selfProjects.projects.filter((project) => {
     if (activeFilter === "all") return true;

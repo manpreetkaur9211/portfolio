@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { ExternalLink, Code } from "lucide-react";
 import { USER_DATA } from "@/constants/userData";
 import { SECTION_DATA } from "@/constants/sectionData";
@@ -16,33 +17,11 @@ interface Project {
 }
 
 const ProjectCard = ({ project }: { project: Project }) => {
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
-
-    return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
-      }
-    };
-  }, []);
+  const cardRef = useIntersectionObserver<HTMLDivElement>()
 
   return (
-    <div 
-      ref={cardRef} 
+    <div
+      ref={cardRef}
       className="animate-on-scroll bg-white rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2"
     >
       <div className="relative aspect-video overflow-hidden">
