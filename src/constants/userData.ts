@@ -1,8 +1,8 @@
 export const USER_DATA = {
   personal: {
     name: "Manpreet Kaur",
-    role: "Senior Full Stack Developer",
-    introduction: "Senior Full Stack Developer with 9 years across React, Angular, TypeScript, and Node.js. I build production-grade applications and integrate AI-assisted workflows — using Claude Code for prompt-driven development, rapid prototyping, and shipping faster without compromising quality.",
+    role: "Senior Full-Stack Engineer",
+    introduction: "Senior Full-Stack Engineer with 10+ years delivering production platforms across React 19, Next.js 15, TypeScript, and Node.js. I build LLM-powered pipelines and AI-integrated products — using Claude Code and Vercel AI SDK for prompt-driven development, rapid prototyping, and shipping at scale without compromising quality.",
     image: {
       url: "manpreet.jpg",
       alt: "Manpreet Kaur"
@@ -10,37 +10,36 @@ export const USER_DATA = {
   },
   about: {
     paragraphs: [
-      "Hello! I'm Manpreet, a Senior Full Stack Developer with 9 years of experience specializing in front-end development using React and Angular, and back-end development with Node.js.",
-      "I integrate AI-assisted development into my daily workflows — using Claude Code for prompt-driven development, AI pair programming, and rapid prototyping. This has significantly accelerated how I design and ship full-stack features without compromising quality.",
-      "I've delivered high-quality web applications across healthcare, telecom, automotive, and enterprise industries, with strong expertise in UI/UX, AWS-scalable architectures, and Agile delivery. I also mentor junior developers and champion code quality through systematic review and documentation practices."
+      "Hello! I'm Manpreet, a Senior Full-Stack Engineer with 10+ years specialising in React 19, Next.js 15, TypeScript, and Node.js — building production platforms across healthcare, fintech, transportation, and AI-integrated products.",
+      "I integrate AI-assisted development into my daily workflows — building LLM-powered pipelines using Claude API and Vercel AI SDK, and using Claude Code for prompt-driven development and rapid prototyping. This has significantly accelerated how I design and ship complex full-stack features at scale.",
+      "I've led frontend architecture across multi-platform products, mentored 13 engineers, and championed TDD, Agile/Scrum, and code quality practices. My work spans healthcare, telecom, automotive, and creator economy sectors."
     ]
   },
   experience: [
     {
       id: 1,
-      title: "Full-Stack Developer (React, Node)",
+      title: "Full-Stack Engineer (Part-time)",
       company: "Yeyro Pty Ltd",
       date: "Jul 2024 - Present",
       location: "Melbourne",
       description: [
-        "Created a wearable data integration platform's frontend using React.",
-        "Built a backend for a health data processing engine using Node.js, MongoDB, AWS services.",
-        "Ensured high performance for 10000 user requests per hour."
+        "Led AI integration — embedded LLM-powered automation (Claude API, Vercel AI SDK) into platform workflows to streamline operations and surface actionable health insights.",
+        "Architected real-time notification engine using AWS SQS and WebSockets, improving alert latency for proactive health notifications.",
+        "Built React 19 analytics dashboards visualising AI-generated health datasets for enterprise clients.",
+        "Built Node.js health data processing backend integrating MongoDB and AWS for continuous wearable sensor ingestion."
       ]
     },
     {
       id: 2,
-      title: "Senior Front-End Engineer / Full-Stack Developer",
+      title: "Senior Full-Stack Developer",
       company: "Daffodil Software Pvt Ltd",
       date: "Jun 2015 - Jun 2024",
       location: "Gurugram, India",
       description: [
-        "Developed front-end architecture with ReactJS/Angular and integrated with REST APIs across various technologies (Node, C#, Java, .NET), using proactive communication to align with back-end teams.",
-        "Collaborated with cross-functional teams (UI/UX) to deliver efficient, high-quality products.",
-        "Designed/implemented scalable back-end logic for APIs/microservices using NodeJS.",
-        "Mentored junior developers (code reviews, pair programming), fostering knowledge sharing and team growth.",
-        "Implemented best practices for coding, testing, and documentation to ensure code quality.",
-        "Led result-driven processes (Agile, SDLC), ensuring project execution and delivery."
+        "Led frontend architecture across 4 simultaneous client platforms — healthcare, transportation, fintech, and automotive sectors.",
+        "Mentored 13 engineers through code reviews, pair programming, and architecture coaching, improving team delivery velocity.",
+        "Drove adoption of TDD, Agile/Scrum, and engineering best practices across cross-functional teams of 10+ engineers.",
+        "Designed and implemented scalable REST API backends and microservices in Node.js, integrating across diverse tech stacks (Node.js, .NET, Java, C#)."
       ]
     }
   ],
@@ -48,7 +47,7 @@ export const USER_DATA = {
     {
       id: 1,
       title: "Denso E-Audit",
-      description: "An E-Audit system for the automobile industry. Worked as a full-stack developer utilizing React.js, Node.js, MongoDB, Twilio, and AWS.",
+      description: "Enterprise digital transformation for Denso Corporation — replaced a paper-based audit process with a live video and digital evidence system. Led full-stack delivery including Twilio integration for remote and face-to-face audit sessions.",
       image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3",
       technologies: ["React", "Node.js", "MongoDB", "AWS", "Twilio"],
       liveUrl: "https://www.daffodilsw.com/case-study/developing-compliance-management-software-solution/",
@@ -57,18 +56,18 @@ export const USER_DATA = {
     {
       id: 2,
       title: "Exly",
-      description: "A website creator tool for professionals. Worked on front-end utilizing React and Material UI components.",
+      description: "India's fastest-growing creator economy platform ($6.2M funded). Primary React/Next.js engineer for the consumer-facing product; built the design system with React-Admin and Storybook adopted across a team of 4 engineers.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3",
-      technologies: ["React", "Material UI", "TypeScript"],
+      technologies: ["React", "Next.js 15", "Material UI", "Node.js", "React-Admin", "Storybook"],
       liveUrl: "#",
       codeUrl: "#"
     },
     {
       id: 3,
       title: "HEALTheia",
-      description: "Telemedicine platform for eyecare. Worked as a full-stack developer utilizing Angular, Material UI, PubNub, Vonage, Node.js, and MongoDB.",
+      description: "Telemedicine platform for eye care. Sole engineer across both patient and provider portals — built appointment scheduling, live video consultations (OpenTok/WebRTC), prescription management, and PubNub-powered async messaging.",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3",
-      technologies: ["Angular", "Node.js", "MongoDB", "PubNub", "Vonage"],
+      technologies: ["Angular", "Node.js", "MongoDB", "PubNub", "OpenTok"],
       liveUrl: "#",
       codeUrl: "#"
     },
@@ -93,9 +92,9 @@ export const USER_DATA = {
     {
       id: 6,
       title: "Chalo",
-      description: "A multi-platform transportation management system that includes a tracking system, fleet management, and a booking system. Worked as a front-end developer with Angular and Bootstrap.",
+      description: "India's #1 public transport platform — 100M+ monthly rides, 15,000+ buses, 37+ cities. Sole engineer on the GPS fleet tracking product; built real-time map visualisations with D3.js and Google Maps API, and led TMTU transport network management system from zero to production.",
       image: "https://chalo.com/assets/images/mock.png",
-      technologies: ["Angular", "Bootstrap", "React", "Material UI"],
+      technologies: ["Angular", "D3.js", "Google Maps API", "Node.js"],
       liveUrl: "https://chalo.com/",
       // codeUrl: "#"
     }
@@ -202,25 +201,28 @@ export const USER_DATA = {
   skills: {
     frontend: [
       { name: "React.js", percentage: 95, color: "bg-blue-500" },
+      { name: "Next.js", percentage: 90, color: "bg-blue-400" },
       { name: "Angular", percentage: 90, color: "bg-blue-600" },
       { name: "TypeScript", percentage: 85, color: "bg-portfolio-accent" },
       { name: "JavaScript", percentage: 95, color: "bg-portfolio-blue" },
       { name: "HTML5/CSS", percentage: 90, color: "bg-blue-700" },
-      { name: "Redux", percentage: 95, color: "bg-blue-800" }
+      { name: "Redux / RxJS", percentage: 90, color: "bg-blue-800" }
     ],
     backend: [
       { name: "Node.js", percentage: 80, color: "bg-green-500" },
       { name: "Express", percentage: 80, color: "bg-green-600" },
       { name: "MongoDB", percentage: 85, color: "bg-green-700" },
-      { name: "SQL", percentage: 75, color: "bg-green-800" }
+      { name: "PostgreSQL / SQL", percentage: 75, color: "bg-green-800" }
     ],
     other: [
       { name: "UI/UX Design", percentage: 85, color: "bg-purple-500" },
       { name: "AWS", percentage: 85, color: "bg-purple-600" },
+      { name: "Docker", percentage: 75, color: "bg-purple-400" },
+      { name: "Firebase", percentage: 75, color: "bg-orange-400" },
       { name: "Agile/SDLC", percentage: 90, color: "bg-purple-700" },
-      { name: "Testing Frameworks", percentage: 85, color: "bg-purple-800" },
-      { name: "AI-Assisted Development", percentage: 80, color: "bg-orange-500" },
-      { name: "Prompt Engineering", percentage: 75, color: "bg-orange-600" }
+      { name: "Testing (Jest / RTL / Playwright)", percentage: 85, color: "bg-purple-800" },
+      { name: "AI-Assisted Development", percentage: 85, color: "bg-orange-500" },
+      { name: "Vercel AI SDK / Prompt Engineering", percentage: 80, color: "bg-orange-600" }
     ]
   },
   contact: {
