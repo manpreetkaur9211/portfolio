@@ -18,7 +18,7 @@ export const USER_DATA = {
   experience: [
     {
       id: 1,
-      title: "Full-Stack Engineer (Part-time)",
+      title: "Full-Stack Engineer",
       company: "Yeyro Pty Ltd",
       date: "Jul 2024 - Present",
       location: "Melbourne",
