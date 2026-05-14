@@ -195,6 +195,21 @@ export const USER_DATA = {
           "Scroll-triggered animations",
           "EmailJS contact form"
         ]
+      },
+      {
+        id: 5,
+        title: "Full-Stack Demo Hub",
+        description: "Four interactive demos built while learning modern full-stack patterns: Invoice Dashboard (Next.js 15 Server Components + PostgreSQL), Live Tractor Telemetry (WebSocket + Leaflet maps), Claude Research Agent (SSE streaming + AI), and Collaborative Whiteboard (Socket.IO + multi-user real-time).",
+        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3",
+        technologies: ["Next.js 15", "Express", "PostgreSQL", "MongoDB", "Socket.IO", "Claude AI", "React-Leaflet", "JWT"],
+        liveUrl: "https://pa-tawny.vercel.app/",
+        codeUrl: "#",
+        features: [
+          "Invoice Dashboard with Server Actions, Suspense streaming, and PostgreSQL",
+          "Real-time GPS tracking on interactive Leaflet map via WebSocket",
+          "Claude AI research agent with live web search and SSE streaming",
+          "Multi-user collaborative whiteboard with Socket.IO and JWT auth"
+        ]
       }
     ]
   },
