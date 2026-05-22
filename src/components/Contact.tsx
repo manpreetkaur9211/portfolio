@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import { Mail, Phone, MapPin, Download } from "lucide-react";
+import { Mail, MapPin, Download } from "lucide-react";
 import { USER_DATA } from "@/constants/userData";
 import { SECTION_DATA } from "@/constants/sectionData";
 import emailjs from '@emailjs/browser';
@@ -106,16 +106,6 @@ const Contact = () => {
                     <div>
                       <h4 className="font-medium text-portfolio-blue">Email</h4>
                       <p className="text-gray-600">{USER_DATA.contact.email}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="bg-portfolio-accent bg-opacity-10 p-3 rounded-full mr-4">
-                      <Phone size={20} className="text-portfolio-accent" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-portfolio-blue">Phone</h4>
-                      <p className="text-gray-600">{USER_DATA.contact.phone}</p>
                     </div>
                   </div>
                   

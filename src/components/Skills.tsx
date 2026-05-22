@@ -1,37 +1,14 @@
-'use client'
-import { useState } from "react";
-import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { USER_DATA } from "@/constants/userData";
 import { SECTION_DATA } from "@/constants/sectionData";
 
-interface Skill {
-  name: string;
-  percentage: number;
-  color: string;
-}
-
-const SkillBar = ({ skill }: { skill: Skill }) => {
-  const [width, setWidth] = useState(0);
-  const skillRef = useIntersectionObserver<HTMLDivElement>({
-    addVisibleClass: false,
-    onIntersect: () => setTimeout(() => setWidth(skill.percentage), 300),
-  })
-
-  return (
-    <div ref={skillRef} className="mb-6">
-      <div className="flex justify-between mb-2">
-        <span className="text-sm font-medium text-gray-700">{skill.name}</span>
-        <span className="text-sm font-medium text-gray-700">{skill.percentage}%</span>
-      </div>
-      <div className="progress-bar">
-        <div 
-          className={`progress-bar-fill ${skill.color}`} 
-          style={{ width: `${width}%` }} 
-        />
-      </div>
-    </div>
-  );
-};
+const CATEGORIES = [
+  { key: "frontend" as const,   label: "Frontend" },
+  { key: "backend" as const,    label: "Backend" },
+  { key: "cloudInfra" as const, label: "Cloud & Infra" },
+  { key: "aiTooling" as const,  label: "AI & Tooling" },
+  { key: "testing" as const,    label: "Testing" },
+  { key: "practices" as const,  label: "Practices" },
+];
 
 const Skills = () => {
   return (
@@ -45,28 +22,25 @@ const Skills = () => {
             {SECTION_DATA.skills.subtitle}
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div className="bg-white p-8 rounded-xl shadow-md">
-            <h3 className="text-xl font-bold mb-6 text-portfolio-blue">{SECTION_DATA.skills.categories.frontend.title}</h3>
-            {USER_DATA.skills.frontend.map((skill) => (
-              <SkillBar key={skill.name} skill={skill} />
-            ))}
-          </div>
-          
-          <div className="bg-white p-8 rounded-xl shadow-md">
-            <h3 className="text-xl font-bold mb-6 text-portfolio-blue">{SECTION_DATA.skills.categories.backend.title}</h3>
-            {USER_DATA.skills.backend.map((skill) => (
-              <SkillBar key={skill.name} skill={skill} />
-            ))}
-          </div>
-          
-          <div className="bg-white p-8 rounded-xl shadow-md">
-            <h3 className="text-xl font-bold mb-6 text-portfolio-blue">{SECTION_DATA.skills.categories.other.title}</h3>
-            {USER_DATA.skills.other.map((skill) => (
-              <SkillBar key={skill.name} skill={skill} />
-            ))}
-          </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {CATEGORIES.map(({ key, label }) => (
+            <div key={key} className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="text-sm font-semibold text-portfolio-blue uppercase tracking-wider mb-4">
+                {label}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {USER_DATA.skills[key].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 bg-blue-50 text-portfolio-accent border border-blue-100 rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

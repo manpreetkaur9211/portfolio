@@ -2,7 +2,7 @@ export const USER_DATA = {
   personal: {
     name: "Manpreet Kaur",
     role: "Senior Full-Stack Engineer",
-    introduction: "Senior Full-Stack Engineer with 10+ years delivering production platforms across React 19, Next.js 15, TypeScript, and Node.js. I build LLM-powered pipelines and AI-integrated products — using Claude Code and Vercel AI SDK for prompt-driven development, rapid prototyping, and shipping at scale without compromising quality.",
+    introduction: "I build production-grade full-stack products — React, Next.js, Node.js, and LLM-powered pipelines that ship fast and scale.",
     image: {
       url: "manpreet.jpg",
       alt: "Manpreet Kaur"
@@ -10,9 +10,10 @@ export const USER_DATA = {
   },
   about: {
     paragraphs: [
-      "Hello! I'm Manpreet, a Senior Full-Stack Engineer with 10+ years specialising in React 19, Next.js 15, TypeScript, and Node.js — building production platforms across healthcare, fintech, transportation, and AI-integrated products.",
-      "I integrate AI-assisted development into my daily workflows — building LLM-powered pipelines using Claude API and Vercel AI SDK, and using Claude Code for prompt-driven development and rapid prototyping. This has significantly accelerated how I design and ship complex full-stack features at scale.",
-      "I've led frontend architecture across multi-platform products, mentored 13 engineers, and championed TDD, Agile/Scrum, and code quality practices. My work spans healthcare, telecom, automotive, and creator economy sectors."
+      "I'm Manpreet — a Senior Full-Stack Engineer based in Melbourne with 10+ years building production platforms across healthcare, fintech, transportation, and AI.",
+      "I've led frontend architecture across 4 simultaneous client platforms, mentored 13 engineers, and shipped products used by tens of millions of people — from Chalo's 100M+ monthly rides to Exly's creator economy platform.",
+      "Right now I'm doing the most interesting work of my career: integrating LLM-powered pipelines into real production systems using Claude API and Vercel AI SDK at Yeyro — not prototypes, actual shipped features.",
+      "I'm looking for my next senior or staff-level role where engineering quality, AI integration, and product impact go together. Open to Melbourne-based or remote opportunities with teams who care about both craft and shipping."
     ]
   },
   experience: [
@@ -46,57 +47,98 @@ export const USER_DATA = {
   projects: [
     {
       id: 1,
-      title: "Denso E-Audit",
-      description: "Enterprise digital transformation for Denso Corporation — replaced a paper-based audit process with a live video and digital evidence system. Led full-stack delivery including Twilio integration for remote and face-to-face audit sessions.",
-      image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3",
-      technologies: ["React", "Node.js", "MongoDB", "AWS", "Twilio"],
-      liveUrl: "https://www.daffodilsw.com/case-study/developing-compliance-management-software-solution/",
-      codeUrl: "#"
-    },
-    {
-      id: 2,
-      title: "Exly",
-      description: "India's fastest-growing creator economy platform ($6.2M funded). Primary React/Next.js engineer for the consumer-facing product; built the design system with React-Admin and Storybook adopted across a team of 4 engineers.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3",
-      technologies: ["React", "Next.js 15", "Material UI", "Node.js", "React-Admin", "Storybook"],
-      liveUrl: "#",
-      codeUrl: "#"
-    },
-    {
-      id: 3,
-      title: "HEALTheia",
-      description: "Telemedicine platform for eye care. Sole engineer across both patient and provider portals — built appointment scheduling, live video consultations (OpenTok/WebRTC), prescription management, and PubNub-powered async messaging.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3",
-      technologies: ["Angular", "Node.js", "MongoDB", "PubNub", "OpenTok"],
-      liveUrl: "#",
-      codeUrl: "#"
-    },
-    {
-      id: 4,
-      title: "iBASEt",
-      description: "A manufacturing process management webapp using React, lerna, and react-ind for efficient tracking and management.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3",
-      technologies: ["React", "React-lerna", "React-ind"],
-      liveUrl: "#",
-      codeUrl: "#"
-    },
-    {
-      id: 5,
-      title: "Reliance JIO",
-      description: "A collaboration system for telecommunication network setup. Worked as a front-end developer with Angular and Bootstrap.",
-      image: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Reliance_Jio_Logo.svg",
-      technologies: ["Angular", "Bootstrap"],
-      // liveUrl: "#",
-      // codeUrl: "#"
-    },
-    {
-      id: 6,
+      category: "professional",
       title: "Chalo",
       description: "India's #1 public transport platform — 100M+ monthly rides, 15,000+ buses, 37+ cities. Sole engineer on the GPS fleet tracking product; built real-time map visualisations with D3.js and Google Maps API, and led TMTU transport network management system from zero to production.",
+      stat: "100M+ monthly rides · 15,000+ buses · 37+ cities",
       image: "https://chalo.com/assets/images/mock.png",
       technologies: ["Angular", "D3.js", "Google Maps API", "Node.js"],
       liveUrl: "https://chalo.com/",
-      // codeUrl: "#"
+      ndaNote: "NDA — code private"
+    },
+    {
+      id: 2,
+      category: "professional",
+      title: "Exly",
+      description: "India's fastest-growing creator economy platform ($6.2M funded). Primary React/Next.js engineer for the consumer-facing product; built the design system with React-Admin and Storybook adopted across a team of 4 engineers.",
+      stat: "$6.2M funded · Design system adopted by 4 engineers",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3",
+      technologies: ["React", "Next.js 15", "Material UI", "Node.js", "React-Admin", "Storybook"],
+      liveUrl: "https://exly.in",
+      ndaNote: "NDA — code private"
+    },
+    {
+      id: 3,
+      category: "professional",
+      title: "Denso E-Audit",
+      description: "Enterprise digital transformation for Denso Corporation — replaced a paper-based audit process with a live video and digital evidence system. Led full-stack delivery including Twilio integration for remote and face-to-face audit sessions.",
+      stat: "Enterprise digital transformation · Automotive sector",
+      image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3",
+      technologies: ["React", "Node.js", "MongoDB", "AWS", "Twilio"],
+      liveUrl: "https://www.daffodilsw.com/case-study/developing-compliance-management-software-solution/",
+      liveUrlLabel: "Case Study",
+      ndaNote: "NDA — code private"
+    },
+    {
+      id: 4,
+      category: "professional",
+      title: "HEALTheia",
+      description: "Telemedicine platform for eye care. Sole engineer across both patient and provider portals — built appointment scheduling, live video consultations (OpenTok/WebRTC), prescription management, and PubNub-powered async messaging.",
+      stat: "Sole engineer · Patient + provider portals · Live video consultations",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3",
+      technologies: ["Angular", "Node.js", "MongoDB", "PubNub", "OpenTok"],
+      ndaNote: "NDA — code private"
+    },
+    {
+      id: 5,
+      category: "professional",
+      title: "iBASEt",
+      description: "Manufacturing process management platform for enterprise aerospace and defence clients — efficient tracking and management of complex production workflows.",
+      stat: "Enterprise-scale · Manufacturing · Aerospace & Defence",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3",
+      technologies: ["React", "React-lerna", "React-ind"],
+      ndaNote: "NDA — code private"
+    },
+    {
+      id: 6,
+      category: "professional",
+      title: "Reliance JIO",
+      description: "Collaboration system for telecommunications network setup coordination across Reliance JIO's infrastructure rollout.",
+      stat: "Enterprise-scale · Telecommunications",
+      image: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Reliance_Jio_Logo.svg",
+      technologies: ["Angular", "Bootstrap"],
+      ndaNote: "NDA — code private"
+    },
+    {
+      id: 7,
+      category: "personal",
+      title: "Full-Stack Demo Hub",
+      description: "Four interactive demos built while learning modern full-stack patterns: Invoice Dashboard (Next.js 15 Server Components + PostgreSQL), Live Tractor Telemetry (WebSocket + Leaflet maps), Claude Research Agent (SSE streaming + AI), and Collaborative Whiteboard (Socket.IO + multi-user real-time).",
+      stat: "4 interactive demos · Live WebSocket telemetry · Real-time collaboration",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3",
+      technologies: ["Next.js 15", "Express", "PostgreSQL", "MongoDB", "Socket.IO", "Claude AI", "React-Leaflet", "JWT"],
+      liveUrl: "https://pa-tawny.vercel.app/"
+    },
+    {
+      id: 8,
+      category: "personal",
+      title: "Portfolio Hub",
+      description: "Personal portfolio built end-to-end with AI-assisted development using Claude Code — prompt-driven UI, modern Next.js + TypeScript stack, and automated content workflows.",
+      stat: "Built with Claude Code · Next.js 15 · Deployed on Vercel",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Claude Code"],
+      codeUrl: "https://github.com/manpreetkaur9211"
+    },
+    {
+      id: 9,
+      category: "personal",
+      title: "ClinScribe",
+      description: "Real-time AI scribe for clinical consultations — speak during a patient session and get structured clinical notes instantly. Uses the Web Speech API for live transcription and Claude API to generate formatted notes from the transcript.",
+      stat: "Built as a job application showcase · Live demo available",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3",
+      technologies: ["Next.js", "Claude API", "Web Speech API", "TypeScript"],
+      liveUrl: "https://scribe-black.vercel.app/",
+      codeUrl: "https://github.com/manpreet-kaur9211/scribe"
     }
   ],
   selfLearning: {
@@ -144,12 +186,7 @@ export const USER_DATA = {
         technologies: ["React", "Node.js", "OpenAI API", "MongoDB"],
         liveUrl: "#",
         codeUrl: "#",
-        features: [
-          "AI-powered task prioritization",
-          "Natural language task input",
-          "Smart categorization",
-          "Progress analytics"
-        ]
+        features: ["AI-powered task prioritization", "Natural language task input", "Smart categorization", "Progress analytics"]
       },
       {
         id: 2,
@@ -159,12 +196,7 @@ export const USER_DATA = {
         technologies: ["WebSocket", "React", "Node.js", "Redis"],
         liveUrl: "#",
         codeUrl: "#",
-        features: [
-          "Real-time code editing",
-          "Multiple language support",
-          "Git integration",
-          "Chat functionality"
-        ]
+        features: ["Real-time code editing", "Multiple language support", "Git integration", "Chat functionality"]
       },
       {
         id: 3,
@@ -174,12 +206,7 @@ export const USER_DATA = {
         technologies: ["React", "D3.js", "Node.js", "PostgreSQL"],
         liveUrl: "#",
         codeUrl: "#",
-        features: [
-          "Expense tracking",
-          "Investment portfolio analysis",
-          "Financial goal setting",
-          "Interactive charts"
-        ]
+        features: ["Expense tracking", "Investment portfolio analysis", "Financial goal setting", "Interactive charts"]
       },
       {
         id: 4,
@@ -189,12 +216,7 @@ export const USER_DATA = {
         technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Claude Code"],
         liveUrl: "#",
         codeUrl: "https://github.com/manpreetkaur9211",
-        features: [
-          "AI-assisted development with Claude Code",
-          "Responsive design with Tailwind CSS",
-          "Scroll-triggered animations",
-          "EmailJS contact form"
-        ]
+        features: ["AI-assisted development with Claude Code", "Responsive design with Tailwind CSS", "Scroll-triggered animations", "EmailJS contact form"]
       },
       {
         id: 5,
@@ -214,35 +236,15 @@ export const USER_DATA = {
     ]
   },
   skills: {
-    frontend: [
-      { name: "React.js", percentage: 95, color: "bg-blue-500" },
-      { name: "Next.js", percentage: 90, color: "bg-blue-400" },
-      { name: "Angular", percentage: 90, color: "bg-blue-600" },
-      { name: "TypeScript", percentage: 85, color: "bg-portfolio-accent" },
-      { name: "JavaScript", percentage: 95, color: "bg-portfolio-blue" },
-      { name: "HTML5/CSS", percentage: 90, color: "bg-blue-700" },
-      { name: "Redux / RxJS", percentage: 90, color: "bg-blue-800" }
-    ],
-    backend: [
-      { name: "Node.js", percentage: 80, color: "bg-green-500" },
-      { name: "Express", percentage: 80, color: "bg-green-600" },
-      { name: "MongoDB", percentage: 85, color: "bg-green-700" },
-      { name: "PostgreSQL / SQL", percentage: 75, color: "bg-green-800" }
-    ],
-    other: [
-      { name: "UI/UX Design", percentage: 85, color: "bg-purple-500" },
-      { name: "AWS", percentage: 85, color: "bg-purple-600" },
-      { name: "Docker", percentage: 75, color: "bg-purple-400" },
-      { name: "Firebase", percentage: 75, color: "bg-orange-400" },
-      { name: "Agile/SDLC", percentage: 90, color: "bg-purple-700" },
-      { name: "Testing (Jest / RTL / Playwright)", percentage: 85, color: "bg-purple-800" },
-      { name: "AI-Assisted Development", percentage: 85, color: "bg-orange-500" },
-      { name: "Vercel AI SDK / Prompt Engineering", percentage: 80, color: "bg-orange-600" }
-    ]
+    frontend: ["React", "Next.js", "Angular", "TypeScript", "Redux/RxJS", "HTML5/CSS"],
+    backend: ["Node.js", "Express", "PostgreSQL", "MongoDB", "REST APIs"],
+    cloudInfra: ["AWS", "Docker", "Firebase", "CI/CD"],
+    aiTooling: ["Claude API", "Vercel AI SDK", "Prompt Engineering", "Claude Code"],
+    testing: ["Jest", "React Testing Library", "Playwright"],
+    practices: ["TDD", "Agile/Scrum", "Technical Mentoring", "Architecture Design"]
   },
   contact: {
     email: "manpreet.k9211@gmail.com",
-    phone: "+61 452 412 499",
     location: "Melbourne, Australia",
     resumePath: "/resume.pdf",
     resumeFileName: "Manpreet_Kaur_Resume.pdf",
@@ -255,4 +257,4 @@ export const USER_DATA = {
       twitter?: string;
     }
   }
-} as const; 
+};

@@ -14,9 +14,15 @@ const Hero = () => {
               <span className="text-slate-500">{SECTION_DATA.hero.title} </span>
               <span className="text-portfolio-accent">{USER_DATA.personal.name}</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-portfolio-blue mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-portfolio-blue mb-4">
               {USER_DATA.personal.role}
             </h2>
+            <div className="flex justify-center md:justify-start mb-8">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 border border-green-300 text-green-700 rounded-full text-sm font-medium">
+                <span className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0" />
+                Open to senior full-stack roles — Melbourne or Remote
+              </span>
+            </div>
             <p className="text-lg text-gray-600 mb-10">
               {USER_DATA.personal.introduction}
             </p>

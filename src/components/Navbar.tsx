@@ -9,12 +9,9 @@ import { USER_DATA } from "@/constants/userData";
 
 const sectionLinks = [
   { title: "About", href: "#about" },
-  { title: "Skills", href: "#skills" },
-  { title: "AI & Learning", href: "#self-learning" },
-  { title: "Personal Projects", href: "#self-projects" },
-  { title: "Experience", href: "#experience" },
   { title: "Projects", href: "#projects" },
-  { title: "Contact", href: "#contact" }
+  { title: "Experience", href: "#experience" },
+  { title: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -62,7 +59,6 @@ const Navbar = () => {
               </a>
             ))}
 
-            {/* Blog — separate route, not a hash anchor */}
             <Link
               href="/blog"
               className={`font-medium transition-colors ${

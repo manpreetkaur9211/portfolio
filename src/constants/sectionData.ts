@@ -11,9 +11,9 @@ export const SECTION_DATA = {
     subtitle: "A chronicle of my professional journey and career highlights."
   },
   projects: {
-    title: "My Projects",
-    subtitle: "Explore some of my key projects. Each project showcases different technologies and demonstrates my expertise in both frontend and backend development.",
-    filters: ["all", "React", "Angular", "Node.js", "MongoDB", "AWS"]
+    title: "Projects",
+    subtitle: "Professional work and personal builds — real products used by real people.",
+    filters: ["all", "professional", "personal"] as const
   },
   selfLearning: {
     title: "AI & Technical Growth",
@@ -26,19 +26,8 @@ export const SECTION_DATA = {
     filters: ["all", "Web Apps", "AI/ML", "Tools", "Games"]
   },
   skills: {
-    title: "My Skills",
-    subtitle: "With 9 years of experience specializing in front-end and back-end development, I've developed expertise in a variety of technologies across the full stack spectrum.",
-    categories: {
-      frontend: {
-        title: "Frontend Development"
-      },
-      backend: {
-        title: "Backend Development"
-      },
-      other: {
-        title: "Other Skills"
-      }
-    }
+    title: "Tech Stack",
+    subtitle: "Technologies and practices I use to build production software."
   },
   contact: {
     title: "Get In Touch",
