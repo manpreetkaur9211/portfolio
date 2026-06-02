@@ -127,7 +127,7 @@ export const USER_DATA = {
       title: "Portfolio Hub",
       description: "Personal portfolio built end-to-end with AI-assisted development using Claude Code — prompt-driven UI, modern Next.js + TypeScript stack, and automated content workflows.",
       stat: "Built with Claude Code · Next.js 15 · Deployed on Vercel",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3",
+      image: "/og-image.png",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Claude Code"],
       codeUrl: "https://github.com/manpreetkaur9211"
     },
