@@ -11,7 +11,7 @@ export default function BlogPostHeader({ post }: BlogPostHeaderProps) {
     <div className="mb-10">
       <Link
         href="/blog"
-        className="inline-flex items-center gap-2 text-sm text-portfolio-accent hover:text-portfolio-blue transition-colors mb-8"
+        className="inline-flex items-center gap-2 text-sm text-blue-500 dark:text-blue-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors mb-8"
       >
         <ArrowLeft size={16} />
         Back to Blog
@@ -22,7 +22,7 @@ export default function BlogPostHeader({ post }: BlogPostHeaderProps) {
         {post.tags.map(tag => (
           <span
             key={tag}
-            className="text-xs font-medium bg-blue-50 text-portfolio-accent px-2 py-1 rounded-full"
+            className="text-xs font-medium bg-slate-100/80 text-slate-700 border border-slate-200/40 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700 px-2.5 py-1 rounded-full"
           >
             {tag}
           </span>
@@ -30,12 +30,12 @@ export default function BlogPostHeader({ post }: BlogPostHeaderProps) {
       </div>
 
       {/* Title */}
-      <h1 className="font-heading text-3xl md:text-4xl font-bold text-portfolio-blue leading-tight mb-4">
+      <h1 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-50 leading-tight mb-4">
         {post.title}
       </h1>
 
       {/* Meta row */}
-      <div className="flex items-center gap-6 text-sm text-gray-500">
+      <div className="flex items-center gap-6 text-sm text-slate-500 dark:text-slate-400">
         <span className="flex items-center gap-2">
           <Calendar size={14} />
           {new Date(post.date).toLocaleDateString('en-AU', {
@@ -50,7 +50,7 @@ export default function BlogPostHeader({ post }: BlogPostHeaderProps) {
         </span>
       </div>
 
-      <div className="mt-8 border-t border-gray-200" />
+      <div className="mt-8 border-t border-slate-200 dark:border-slate-700" />
     </div>
   )
 }

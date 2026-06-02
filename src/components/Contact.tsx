@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
@@ -28,7 +27,6 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     try {
       await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
@@ -43,24 +41,10 @@ const Contact = () => {
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
-
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
-      });
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again later.",
-        variant: "destructive",
-      });
+      toast({ title: "Message sent!", description: "Thank you for your message. I'll get back to you soon." });
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch {
+      toast({ title: "Error", description: "Failed to send message. Please try again later.", variant: "destructive" });
     } finally {
       setIsSubmitting(false);
     }
@@ -73,81 +57,86 @@ const Contact = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    
-    toast({
-      title: "Downloading Resume",
-      description: "Your download should begin shortly.",
-    });
+    toast({ title: "Downloading Resume", description: "Your download should begin shortly." });
   };
 
   return (
-    <section id="contact" className="bg-white">
+    <section id="contact" className="bg-white dark:bg-[#0f172a]">
       <div className="section-container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-portfolio-blue mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-50 mb-4">
             {SECTION_DATA.contact.title}
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             {SECTION_DATA.contact.subtitle}
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-start">
-          <div className="bg-gray-50 p-8 rounded-xl">
+
+        <div className="grid grid-cols-1 gap-12 items-start">
+          <div className="bg-slate-50 dark:bg-slate-800/40 border border-slate-200/60 dark:border-slate-700/50 p-8 rounded-xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Contact info column */}
               <div>
-                <h3 className="text-xl font-bold text-portfolio-blue mb-6">{SECTION_DATA.contact.sections.contactInfo}</h3>
-                
+                <h3 className="text-xl font-bold text-slate-900 dark:text-slate-50 mb-6">
+                  {SECTION_DATA.contact.sections.contactInfo}
+                </h3>
+
                 <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="bg-portfolio-accent bg-opacity-10 p-3 rounded-full mr-4">
-                      <Mail size={20} className="text-portfolio-accent" />
+                  <div className="flex items-start gap-4">
+                    <div className="bg-slate-100 dark:bg-slate-700/60 p-3 rounded-full">
+                      <Mail size={20} className="text-slate-700 dark:text-slate-300" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-portfolio-blue">Email</h4>
-                      <p className="text-gray-600">{USER_DATA.contact.email}</p>
+                      <h4 className="font-medium text-slate-900 dark:text-slate-100">Email</h4>
+                      <p className="text-slate-600 dark:text-slate-400">{USER_DATA.contact.email}</p>
                     </div>
                   </div>
-                  
-                  <div className="flex items-start">
-                    <div className="bg-portfolio-accent bg-opacity-10 p-3 rounded-full mr-4">
-                      <MapPin size={20} className="text-portfolio-accent" />
+
+                  <div className="flex items-start gap-4">
+                    <div className="bg-slate-100 dark:bg-slate-700/60 p-3 rounded-full">
+                      <MapPin size={20} className="text-slate-700 dark:text-slate-300" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-portfolio-blue">Location</h4>
-                      <p className="text-gray-600">{USER_DATA.contact.location}</p>
+                      <h4 className="font-medium text-slate-900 dark:text-slate-100">Location</h4>
+                      <p className="text-slate-600 dark:text-slate-400">{USER_DATA.contact.location}</p>
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="mt-8">
-                  <h4 className="font-medium text-portfolio-blue mb-4">{SECTION_DATA.contact.sections.resume}</h4>
-                  <div className="flex space-x-4">
-                    <Button 
-                      onClick={handleDownloadResume}
-                      className="flex items-center gap-2 bg-portfolio-accent hover:bg-portfolio-light-blue"
-                    >
-                      <Download size={16} />
-                      Download Resume
-                    </Button>
-                  </div>
+                  <h4 className="font-medium text-slate-900 dark:text-slate-100 mb-4">
+                    {SECTION_DATA.contact.sections.resume}
+                  </h4>
+                  <button
+                    onClick={handleDownloadResume}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-90 hover:-translate-y-0.5 transition-all duration-300"
+                  >
+                    <Download size={16} />
+                    Download Resume
+                  </button>
                 </div>
-                
+
                 <div className="mt-8">
-                  <h4 className="font-medium text-portfolio-blue mb-4">{SECTION_DATA.contact.sections.followMe}</h4>
-                  <div className="flex space-x-4">
-                    <a 
+                  <h4 className="font-medium text-slate-900 dark:text-slate-100 mb-4">
+                    {SECTION_DATA.contact.sections.followMe}
+                  </h4>
+                  <div className="flex gap-3">
+                    <a
                       href={USER_DATA.contact.socialLinks.github}
-                      className="bg-gray-200 hover:bg-portfolio-accent hover:text-white text-gray-600 p-3 rounded-full transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-slate-200 hover:bg-slate-900 hover:text-white text-slate-600 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-100 dark:hover:text-slate-900 p-3 rounded-full transition-all duration-200"
                       aria-label="GitHub"
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
                       </svg>
                     </a>
-                    <a 
+                    <a
                       href={USER_DATA.contact.socialLinks.linkedin}
-                      className="bg-gray-200 hover:bg-portfolio-accent hover:text-white text-gray-600 p-3 rounded-full transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-slate-200 hover:bg-slate-900 hover:text-white text-slate-600 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-100 dark:hover:text-slate-900 p-3 rounded-full transition-all duration-200"
                       aria-label="LinkedIn"
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -157,12 +146,13 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              
+
+              {/* Form column */}
               <div>
-                <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-md">
+                <form onSubmit={handleSubmit} className="bg-white dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/50 p-8 rounded-xl shadow-sm">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                      <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
                         {SECTION_DATA.contact.form.name.label}
                       </label>
                       <Input
@@ -172,10 +162,11 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         placeholder={SECTION_DATA.contact.form.name.placeholder}
+                        className="dark:bg-slate-800 dark:border-slate-600 dark:text-slate-100 dark:placeholder-slate-500"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                      <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
                         {SECTION_DATA.contact.form.email.label}
                       </label>
                       <Input
@@ -186,12 +177,13 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         placeholder={SECTION_DATA.contact.form.email.placeholder}
+                        className="dark:bg-slate-800 dark:border-slate-600 dark:text-slate-100 dark:placeholder-slate-500"
                       />
                     </div>
                   </div>
-                  
+
                   <div className="mb-6">
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="subject" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
                       {SECTION_DATA.contact.form.subject.label}
                     </label>
                     <Input
@@ -201,11 +193,12 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       placeholder={SECTION_DATA.contact.form.subject.placeholder}
+                      className="dark:bg-slate-800 dark:border-slate-600 dark:text-slate-100 dark:placeholder-slate-500"
                     />
                   </div>
-                  
+
                   <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
                       {SECTION_DATA.contact.form.message.label}
                     </label>
                     <Textarea
@@ -216,16 +209,17 @@ const Contact = () => {
                       required
                       rows={5}
                       placeholder={SECTION_DATA.contact.form.message.placeholder}
+                      className="dark:bg-slate-800 dark:border-slate-600 dark:text-slate-100 dark:placeholder-slate-500"
                     />
                   </div>
-                  
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-portfolio-accent hover:bg-portfolio-light-blue"
+
+                  <button
+                    type="submit"
                     disabled={isSubmitting}
+                    className="w-full py-2.5 px-4 rounded-lg text-sm font-medium bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-90 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:translate-y-0"
                   >
                     {isSubmitting ? SECTION_DATA.contact.form.sending : SECTION_DATA.contact.form.submit}
-                  </Button>
+                  </button>
                 </form>
               </div>
             </div>

@@ -2,7 +2,7 @@ export const USER_DATA = {
   personal: {
     name: "Manpreet Kaur",
     role: "Senior Full-Stack Engineer",
-    introduction: "I build production-grade full-stack products — React, Next.js, Node.js, and LLM-powered pipelines that ship fast and scale.",
+    introduction: "Hi, I'm Manpreet Kaur, a Senior Full-Stack Engineer based in Melbourne. I specialize in React, Next.js, and integrating robust LLM pipelines into scalable real-world products.",
     image: {
       url: "manpreet.jpg",
       alt: "Manpreet Kaur"
@@ -47,6 +47,7 @@ export const USER_DATA = {
   projects: [
     {
       id: 1,
+      isFeatured: true,
       category: "professional",
       title: "Chalo",
       description: "India's #1 public transport platform — 100M+ monthly rides, 15,000+ buses, 37+ cities. Sole engineer on the GPS fleet tracking product; built real-time map visualisations with D3.js and Google Maps API, and led TMTU transport network management system from zero to production.",
@@ -58,10 +59,11 @@ export const USER_DATA = {
     },
     {
       id: 2,
+      isFeatured: true,
       category: "professional",
       title: "Exly",
       description: "India's fastest-growing creator economy platform ($6.2M funded). Primary React/Next.js engineer for the consumer-facing product; built the design system with React-Admin and Storybook adopted across a team of 4 engineers.",
-      stat: "$6.2M funded · Design system adopted by 4 engineers",
+      stat: "$6.2M funded",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3",
       technologies: ["React", "Next.js 15", "Material UI", "Node.js", "React-Admin", "Storybook"],
       liveUrl: "https://exly.in",

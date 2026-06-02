@@ -1,6 +1,7 @@
 export const SECTION_DATA = {
   hero: {
-    title: "Hello, I'm",
+    titleLine1: "Building Production-Grade",
+    titleLine2: "AI & Full-Stack Systems",
     scrollText: "Scroll Down"
   },
   about: {

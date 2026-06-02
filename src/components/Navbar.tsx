@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useTheme } from 'next-themes';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { USER_DATA } from "@/constants/userData";
 
 const sectionLinks = [
@@ -14,6 +15,22 @@ const sectionLinks = [
   { title: "Contact", href: "#contact" },
 ];
 
+const ThemeToggle = () => {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return <div className="w-9 h-9" />;
+  return (
+    <button
+      aria-label="Toggle theme"
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      className="p-2 rounded-full text-gray-600 hover:text-portfolio-accent dark:text-slate-300 dark:hover:text-white transition-colors"
+    >
+      {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+    </button>
+  );
+};
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,10 +38,7 @@ const Navbar = () => {
   const isHome = pathname === '/';
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -38,12 +52,14 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+        isScrolled
+          ? 'bg-white dark:bg-slate-900 shadow-md py-2'
+          : 'bg-transparent py-4'
       }`}
     >
       <div className="container max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center">
-          <Link href="/" className="font-heading text-2xl font-bold text-portfolio-blue">
+          <Link href="/" className="font-heading text-2xl font-bold text-portfolio-blue dark:text-slate-50">
             Portfolio
           </Link>
 
@@ -53,7 +69,7 @@ const Navbar = () => {
               <a
                 key={link.title}
                 href={sectionHref(link.href)}
-                className="font-medium text-gray-600 hover:text-portfolio-accent transition-colors"
+                className="font-medium text-gray-600 hover:text-portfolio-accent dark:text-slate-300 dark:hover:text-white transition-colors"
               >
                 {link.title}
               </a>
@@ -64,11 +80,13 @@ const Navbar = () => {
               className={`font-medium transition-colors ${
                 pathname.startsWith('/blog')
                   ? 'text-portfolio-accent'
-                  : 'text-gray-600 hover:text-portfolio-accent'
+                  : 'text-gray-600 hover:text-portfolio-accent dark:text-slate-300 dark:hover:text-white'
               }`}
             >
               Blog
             </Link>
+
+            <ThemeToggle />
 
             <Button asChild className="bg-portfolio-accent hover:bg-portfolio-light-blue">
               <a href={USER_DATA.contact.resumePath} download={USER_DATA.contact.resumeFileName}>
@@ -78,24 +96,27 @@ const Navbar = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 focus:outline-none"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center gap-1">
+            <ThemeToggle />
+            <button
+              className="p-2 focus:outline-none text-gray-600 dark:text-slate-300"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 animate-fade-in">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-slate-900 shadow-lg py-4 animate-fade-in">
             <div className="flex flex-col space-y-4 px-4">
               {sectionLinks.map((link) => (
                 <a
                   key={link.title}
                   href={sectionHref(link.href)}
-                  className="font-medium text-gray-600 hover:text-portfolio-accent transition-colors py-2"
+                  className="font-medium text-gray-600 hover:text-portfolio-accent dark:text-slate-300 dark:hover:text-white transition-colors py-2"
                   onClick={closeMenu}
                 >
                   {link.title}
@@ -107,7 +128,7 @@ const Navbar = () => {
                 className={`font-medium transition-colors py-2 ${
                   pathname.startsWith('/blog')
                     ? 'text-portfolio-accent'
-                    : 'text-gray-600 hover:text-portfolio-accent'
+                    : 'text-gray-600 hover:text-portfolio-accent dark:text-slate-300 dark:hover:text-white'
                 }`}
                 onClick={closeMenu}
               >
